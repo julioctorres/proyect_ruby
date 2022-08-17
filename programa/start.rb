@@ -11,25 +11,21 @@ class Start
     puts "-------------------------------------------------------------------------"
     puts "Bienvenido a reto 5, por favor ingrese alguna de las siguientes opciones."
     puts "-------------------------------------------------------------------------"
-    puts "marque: 1) agregar usuario, 2) eliminar usuario, 3) fin del juego"
+    puts "marque: 1) Desea iniciar el juego, 2) desea salir del juego"
 
     options = gets.to_i 
-      case options
-
-        when 1
-          @user.create_user
+    case options
+      when 1
+        @user.decision
         
-        when 2
-          @user.delete_usuario
-        
-        when 3
-          puts "Muchas gracias por participar."
+      when 2
+        puts "Muchas gracias por participar."
 
-        else
-          "Error: ha marcado una respuesta erronea (#{options})"
-          start_game  
-        end
+      else
+        "Error: ha marcado una respuesta erronea (#{options})"
+        start_game  
     end
+  end
 end
 
 ini = Start.new.start_game
