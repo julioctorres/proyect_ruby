@@ -1,1 +1,1 @@
-{"Id"=>123, "name"=>"asd\n", "points"=>0}
+{"Id"=>123, "name"=>"asdf\n", "points"=>0}
